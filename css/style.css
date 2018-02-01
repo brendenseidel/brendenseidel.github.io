@@ -21,19 +21,40 @@
     display: table-cell;
     width: 400px;
     height: 400px;
-    border: 35px solid rgba(25, 54, 47, 1);
     z-index: 1;
     position: fixed;
     box-sizing: border-box;
     opacity: .5;
-    background: #c09c8c;
     top: calc(50vh - 200px);
     left: calc(50vw - 200px);
     transition: 
+        left 3s ease-in-out .1s,
+        border-radius 1.5s ease-in-out 1.5s;
+    ;
+    border-width: 30px;
+    border-style: solid;
+}
+
+.element--square {
+    background: #c09c8c;
+    border-color: rgba(25, 54, 47, 1);
+    z-index: 2;
 }
 
 .element--circle {
     border-radius: 50%;
     background: rgba(25, 54, 47, 1);
-    border: 35px solid #c09c8c;
+    border-color: #c09c8c;
+}
+
+.element--circle:hover,
+.element--square:hover + .element--circle {
+    left: calc(30vw - 200px);
+    border-radius: 0;
+}
+
+.element--square:hover,
+.element--circle:hover + .element--square {
+    left: calc(70vw - 200px);
+    border-radius: 50%;
 }
