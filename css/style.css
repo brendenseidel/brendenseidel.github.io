@@ -4,6 +4,8 @@
     left: -50%; 
     width: 200%; 
     height: 200%;
+    filter: saturate(0%) contrast(200%) blur(1px);
+    transition: all 1.5s ease-in-out .1s;
 }
 
 .bg img {
@@ -21,10 +23,11 @@
     display: table-cell;
     width: 400px;
     height: 400px;
+    margin: 10px;
     z-index: 1;
     position: fixed;
     box-sizing: border-box;
-    opacity: .5;
+    opacity: .55;
     top: calc(50vh - 200px);
     left: calc(50vw - 200px);
     transition: all 1.5s ease-in-out .1s;
@@ -53,7 +56,13 @@
 }
 
 .element--square:hover,
-.element--circle:hover + .element--square {
+.element--circle:hover + .element--square,
+.element--square:active,
+.element--circle:active + .element--square {
     border-radius: 50%;
     border-color: #c09c8c;
+}
+
+.element--square:hover ~ .bg {
+    filter: saturate(125%) contrast(150%);
 }
