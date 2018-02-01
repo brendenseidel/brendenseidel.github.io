@@ -48,10 +48,12 @@
 
 .element--circle:hover,
 .element--square:hover + .element--circle {
+    border-color: rgba(25, 54, 47, 1);
     border-radius: 0;
 }
 
 .element--square:hover,
 .element--circle:hover + .element--square {
     border-radius: 50%;
+    border-color: #c09c8c;
 }
