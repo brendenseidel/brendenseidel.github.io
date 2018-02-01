@@ -40,6 +40,10 @@
 .element--circle {
     border-radius: 50%;
     border-color: #c09c8c;
+    width: 240px;
+    height: 240px;
+    top: calc(50vh - 120px);
+    left: calc(50vw - 120px);
 }
 
 .element--circle:hover,
