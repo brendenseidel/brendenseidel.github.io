@@ -27,34 +27,27 @@
     opacity: .5;
     top: calc(50vh - 200px);
     left: calc(50vw - 200px);
-    transition: 
-        left 3s ease-in-out .1s,
-        border-radius 1.5s ease-in-out 1.5s;
-    ;
+    transition: all 1.5s ease-in-out .1s;
     border-width: 30px;
     border-style: solid;
 }
 
 .element--square {
-    background: #c09c8c;
     border-color: rgba(25, 54, 47, 1);
     z-index: 2;
 }
 
 .element--circle {
     border-radius: 50%;
-    background: rgba(25, 54, 47, 1);
     border-color: #c09c8c;
 }
 
 .element--circle:hover,
 .element--square:hover + .element--circle {
-    left: calc(30vw - 200px);
     border-radius: 0;
 }
 
 .element--square:hover,
 .element--circle:hover + .element--square {
-    left: calc(70vw - 200px);
     border-radius: 50%;
 }
