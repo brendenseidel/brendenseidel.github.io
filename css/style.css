@@ -4,7 +4,7 @@
     left: -50%; 
     width: 200%; 
     height: 200%;
-    filter: saturate(0%) contrast(200%) blur(1px);
+    filter: saturate(0%) contrast(200%);
     transition: all 1.5s ease-in-out .1s;
 }
 
@@ -64,5 +64,5 @@
 }
 
 .element--square:hover ~ .bg {
-    filter: saturate(125%) contrast(150%);
+    filter: saturate(100%) contrast(100%);
 }
